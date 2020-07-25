@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://bodies/pencil/Pencil.gd" type="Script" id=1]
+
+[node name="Pencil" type="Line2D"]
+width = 20.0
+antialiased = true
+script = ExtResource( 1 )
