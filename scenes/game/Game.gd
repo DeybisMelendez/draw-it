@@ -1,6 +1,5 @@
 extends Control
 
-export (PackedScene) var Pencil
 onready var Canvas = $HBoxContainer/ViewportContainer/Viewport/Canvas
 onready var ColorPencil = $HBoxContainer/ColorPicker
 onready var ViewPortCanvas = $HBoxContainer/ViewportContainer
@@ -17,6 +16,6 @@ func mouse_exited():
 
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("draw") and can_draw:
-		var new_pencil = Pencil.instance()
+		var new_pencil = Pencil.new()
 		new_pencil.default_color = ColorPencil.color
 		Canvas.add_child(new_pencil)

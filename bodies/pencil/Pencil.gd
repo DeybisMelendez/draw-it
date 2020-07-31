@@ -1,7 +1,12 @@
 extends Line2D
 
+class_name Pencil
+
 var finished = false
 var last_pos
+
+func _init():
+	antialiased = true
 
 func _physics_process(_delta):
 	if not finished:
